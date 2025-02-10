@@ -3,7 +3,7 @@ require_relative "utils"
 module Tenkit
   class Container
     def initialize(contents)
-      return contents if !contents.is_a?(Hash)
+      return unless contents.is_a?(Hash)
 
       contents.each do |key, val|
         name = Tenkit::Utils.snake(key)
