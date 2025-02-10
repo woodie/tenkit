@@ -91,7 +91,7 @@ RSpec.describe Tenkit do
         expect(resp.weather_alert.summary).to be_a(Tenkit::WeatherAlertSummary)
       end
 
-      context "with valid payload" do
+      context "with WeatherAlert payload" do
         let(:body) { File.read("test/fixtures/alert.json") }
 
         it "contains expected payload objects" do
